@@ -169,3 +169,48 @@ void login(){
 	}
 
 }
+
+void DataMahasiswa(){
+	int pil;
+	char rep;
+	do{
+	system("cls");
+	header();
+	puts("|                DATA INDUK MAHASISWA                    |");
+	puts("==========================================================");
+	puts(" --> 1. Tampilkan Data");
+	puts(" --> 2. Tambah Data");
+	puts(" --> 3. Hapus Data");
+	puts(" --> 4. Edit Data");
+	puts(" --> 5. Kembali");
+	puts("==========================================================");
+	printf(" --> Pilihan : ");
+	scanf("%d",&pil);
+
+	switch(pil){
+		case 1 :
+			showMahasiswa();
+		break;
+		case 2 :
+			addMahasiswa();
+		break;
+		case 3 :
+			deleteMahasiswa();
+		break;
+		case 4 :
+			editMahasiswa();
+		break;
+		case 5 :
+			main();
+		break;
+		default:
+			puts(" --> Pilihan tidak tersedia");
+		break;
+	}
+
+	puts("==========================================================");
+	printf(" --> Kembali ke menu sebelumnya ? (y/t) : ");
+	scanf("%s",&rep);
+
+	}while(rep=='y'||rep=='Y');
+}
